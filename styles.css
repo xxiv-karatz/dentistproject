@@ -383,17 +383,56 @@ h2 em {
   justify-content: center;
   width: clamp(2.2rem, 5vw, 2.75rem);
   height: clamp(2.2rem, 5vw, 2.75rem);
-  border: 1.5px solid var(--line);
+  border: 2px solid var(--pine);
   border-radius: var(--radius-sm);
-  background: var(--card);
-  color: var(--ink);
+  background: var(--pine-lighter);
+  color: var(--pine);
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+}
+
+.menu-toggle::before {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 2px;
+  background: var(--pine);
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 0 0 var(--pine), 0 16px 0 0 var(--pine);
 }
 
 .menu-toggle:hover {
-  border-color: var(--pine);
-  background: var(--pine-lighter);
+  border-color: var(--pine-dark);
+  background: linear-gradient(135deg, var(--pine-lighter) 0%, var(--pine-light) 100%);
+}
+
+.menu-toggle:hover::before {
+  background: var(--pine-dark);
+  box-shadow: 0 8px 0 0 var(--pine-dark), 0 16px 0 0 var(--pine-dark);
+}
+
+.menu-toggle.active::before {
+  transform: translateX(-50%) rotate(45deg);
+  top: 50%;
+  margin-top: -1px;
+  box-shadow: 0 0 0 0 var(--pine);
+}
+
+.menu-toggle.active::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 2px;
+  background: var(--pine);
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  border-radius: 1px;
 }
 
 .menu-toggle svg {
@@ -938,12 +977,13 @@ h2 em {
   gap: clamp(0.8rem, 1.5vw, 1.2rem);
   grid-template-columns: repeat(2, 1fr);
   margin-top: clamp(2.5rem, 5vw, 4rem);
+  grid-auto-flow: dense;
 }
 
 .gallery-item {
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--line);
   box-shadow: var(--shadow-sm);
   transition: all 0.4s ease;
 }
@@ -958,6 +998,7 @@ h2 em {
 
 .gallery-item:hover {
   box-shadow: var(--shadow-md);
+  border-color: var(--pine-light);
 }
 
 .gallery-item:hover img {
@@ -965,8 +1006,7 @@ h2 em {
 }
 
 .gallery-item-large {
-  grid-column: span 2;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
 }
 
 .gallery-item:not(.gallery-item-large) {
@@ -1245,11 +1285,11 @@ h2 em {
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .gallery-item-large {
-    grid-column: span 1;
+    aspect-ratio: 4 / 3;
   }
 
   .contact-form {
@@ -1296,7 +1336,7 @@ h2 em {
   }
 
   .gallery-item-large {
-    grid-column: span 2;
+    aspect-ratio: 4 / 3;
   }
 
   .footer-grid {
@@ -1336,6 +1376,11 @@ h2 em {
   .gallery-item-large {
     grid-column: span 2;
     grid-row: span 2;
+    aspect-ratio: auto;
+  }
+
+  .gallery-item:nth-child(4) {
+    grid-column: span 2;
   }
 
   .contact-grid {

@@ -54,10 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
       menuIcon.style.display = "none";
       closeIcon.style.display = "inline-flex";
       mobileNav.style.display = "flex";
+      menuToggle.classList.add("active");
     } else {
       menuIcon.style.display = "inline-flex";
       closeIcon.style.display = "none";
       mobileNav.style.display = "none";
+      menuToggle.classList.remove("active");
     }
   }
 
