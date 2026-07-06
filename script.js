@@ -84,12 +84,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var subject = encodeURIComponent("Appointment Request - FriendlyDentist");
     var body = encodeURIComponent(
-      "Hello FriendlyDentist team,%0D%0A%0D%0AI would like to book an appointment.%0D%0A%0D%0A" +
-        "Full name: " + nameField.value + "%0D%0A" +
-        "Email: " + emailField.value + "%0D%0A" +
-        "Phone: " + phoneField.value + "%0D%0A" +
-        "Preferred date: " + dateField.value + "%0D%0A" +
-        "Message: " + messageField.value + "%0D%0A%0D%0AThank you,%0D%0A"
+      "Hello FriendlyDentist team,\n\n" +
+        "I would like to book an appointment.\n\n" +
+        "APPOINTMENT DETAILS:\n" +
+        "Full name: " + nameField.value + "\n" +
+        "Email: " + emailField.value + "\n" +
+        "Phone: " + phoneField.value + "\n" +
+        "Preferred date: " + dateField.value + "\n" +
+        "Message: " + messageField.value + "\n\n" +
+        "Thank you,\nBest regards"
     );
 
     window.location.href = "mailto:info@friendlydentist.co.za?subject=" + subject + "&body=" + body;

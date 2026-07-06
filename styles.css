@@ -211,7 +211,7 @@ h2 em {
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
   padding: clamp(0.8rem, 2vw, 1rem) clamp(1.2rem, 3vw, 1.8rem);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
@@ -1268,8 +1268,8 @@ h2 em {
 
   .desktop-cta {
     display: inline-flex;
-  }
-
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  padding: clamp(0.7rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.8rem);
   .mobile-cta,
   .menu-toggle {
     display: none;
