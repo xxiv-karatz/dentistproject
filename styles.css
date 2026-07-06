@@ -270,6 +270,14 @@ h2 em {
   width: 100%;
 }
 
+.desktop-cta {
+  display: none;
+}
+
+.mobile-cta {
+  display: inline-flex;
+}
+
 /* ---------------------------------- header ------------------------------ */
 
 .site-header {
@@ -381,39 +389,39 @@ h2 em {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(2.2rem, 5vw, 2.75rem);
-  height: clamp(2.2rem, 5vw, 2.75rem);
-  border: 2px solid var(--pine);
-  border-radius: var(--radius-sm);
-  background: var(--pine-lighter);
-  color: var(--pine);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ink);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  padding: 0;
 }
 
 .menu-toggle::before {
   content: "";
   position: absolute;
-  width: 65%;
-  height: 2px;
-  background: var(--pine);
-  top: 35%;
+  width: 55%;
+  height: 2.5px;
+  background: var(--ink);
+  top: 32%;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 1px;
+  border-radius: 1.25px;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 0 0 var(--pine), 0 16px 0 0 var(--pine);
+  box-shadow: 0 7px 0 0 var(--ink), 0 14px 0 0 var(--ink);
 }
 
 .menu-toggle:hover {
-  border-color: var(--pine-dark);
-  background: linear-gradient(135deg, var(--pine-lighter) 0%, var(--pine-light) 100%);
+  background: rgba(13, 110, 100, 0.08);
 }
 
 .menu-toggle:hover::before {
-  background: var(--pine-dark);
-  box-shadow: 0 8px 0 0 var(--pine-dark), 0 16px 0 0 var(--pine-dark);
+  background: var(--pine);
+  box-shadow: 0 7px 0 0 var(--pine), 0 14px 0 0 var(--pine);
 }
 
 .menu-toggle.active::before {
@@ -1307,9 +1315,9 @@ h2 em {
   }
 
   .desktop-cta {
-    display: inline-flex;
-    font-size: clamp(0.75rem, 1.2vw, 0.85rem);
-    padding: clamp(0.6rem, 1vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+    display: inline-flex !important;
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    padding: clamp(0.7rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.8rem);
   }
 
   .mobile-cta,
