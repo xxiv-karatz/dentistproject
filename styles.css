@@ -488,6 +488,7 @@ h2 em {
 
 .mobile-menu .button {
   margin-top: clamp(0.5rem, 2vw, 1rem);
+  color: var(--card) !important;
 }
 
 /* ---------------------------------- hero -------------------------------- */
