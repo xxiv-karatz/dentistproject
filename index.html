@@ -18,20 +18,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" id="siteHeader">
       <div class="container header-inner">
         <a href="#home" class="brand-link">
-          <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" fill="currentColor">
+          <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round">
             <path d="M32 14c-6 0-9 3-14 3-4 0-6 3-6 8 0 8 3 14 5 19 2 4 3 8 6 8 2 0 3-3 4-6s2-6 5-6 4 3 5 6 2 6 4 6c3 0 4-4 6-8 2-5 5-11 5-19 0-5-2-8-6-8-5 0-8-3-14-3Z" />
           </svg>
-          <span class="brand-text">Friendly<span>Dentist</span></span>
+          <span class="brand-text">Friendly<em>Dentist</em></span>
         </a>
 
         <nav class="site-nav">
@@ -43,8 +43,8 @@
         </nav>
 
         <div class="header-actions">
-          <a href="mailto:info@friendlydentist.co.za?subject=Appointment%20Request%20-%20FriendlyDentist&body=Hello%20FriendlyDentist%20team,%0D%0A%0D%0AI%20would%20like%20to%20book%20an%20appointment.%0D%0A%0D%0AFull%20name:%0D%0AEmail:%0D%0APhone:%0D%0APreferred%20date:%0D%0AMessage:%0D%0A%0D%0AThank%20you,%0D%0A" class="button button-primary desktop-cta">Book Appointment</a>
-          <button class="menu-toggle" id="mobileToggle" aria-label="Toggle menu">
+          <a href="#contact" class="button button-primary desktop-cta">Book Appointment</a>
+          <button class="menu-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
             <span data-lucide="menu" id="menuIcon"></span>
             <span data-lucide="x" id="closeIcon"></span>
           </button>
@@ -56,19 +56,19 @@
         <a href="#services">Services</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
-        <a href="mailto:info@friendlydentist.co.za?subject=Appointment%20Request%20-%20FriendlyDentist&body=Hello%20FriendlyDentist%20team,%0D%0A%0D%0AI%20would%20like%20to%20book%20an%20appointment.%0D%0A%0D%0AFull%20name:%0D%0AEmail:%0D%0APhone:%0D%0APreferred%20date:%0D%0AMessage:%0D%0A%0D%0AThank%20you,%0D%0A" class="button button-primary mobile-cta">Book Appointment</a>
+        <a href="#contact" class="button button-primary mobile-cta">Book Appointment</a>
       </div>
     </header>
 
     <main>
       <section id="home" class="hero-section">
+        <svg class="hero-arc" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,190 C 220,40 420,40 600,130 C 780,220 980,220 1200,70" />
+        </svg>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow-badge">
-              <span data-lucide="sparkles" class="badge-icon"></span>
-              Gentle care, healthy smiles
-            </span>
-            <h1>Your Smile,<br /><span>Our Priority.</span></h1>
+            <span class="eyebrow">Gentle care, healthy smiles</span>
+            <h1>Your smile,<br /><em>our priority.</em></h1>
             <p>
               Compassionate family and cosmetic dentistry in the heart of Sandton. From your child's first
               checkup to a full smile makeover, we make every visit calm, comfortable, and easy.
@@ -81,46 +81,48 @@
               </a>
             </div>
             <div class="hero-features">
-              <div><span data-lucide="check" class="feature-icon"></span>HPCSA Registered</div>
-              <div><span data-lucide="check" class="feature-icon"></span>Same-day emergencies</div>
-              <div><span data-lucide="check" class="feature-icon"></span>Medical aid friendly</div>
+              <div><span data-lucide="check"></span>HPCSA Registered</div>
+              <div><span data-lucide="check"></span>Same-day emergencies</div>
+              <div><span data-lucide="check"></span>Medical aid friendly</div>
             </div>
           </div>
 
           <div class="hero-image-wrap">
-            <div class="hero-image-glow"></div>
-            <img src="assets/hero-dentist.jpg" alt="Dr. H Mtshali with a happy patient at FriendlyDentist in Sandton" />
-            <div class="hero-testimonial-card">
-              <div class="review-badges">
-                <div><span data-lucide="smile"></span></div>
-                <div><span data-lucide="smile"></span></div>
-                <div><span data-lucide="smile"></span></div>
+            <div class="hero-frame">
+              <img src="assets/hero-dentist.jpg" alt="Dr. H Mtshali with a happy patient at FriendlyDentist in Sandton" />
+            </div>
+            <div class="hero-review-card">
+              <div class="stars">
+                <span data-lucide="star"></span>
+                <span data-lucide="star"></span>
+                <span data-lucide="star"></span>
+                <span data-lucide="star"></span>
+                <span data-lucide="star"></span>
               </div>
-              <div class="review-summary">
-                <div class="stars">
-                  <span data-lucide="star"></span>
-                  <span data-lucide="star"></span>
-                  <span data-lucide="star"></span>
-                  <span data-lucide="star"></span>
-                  <span data-lucide="star"></span>
-                </div>
-                <p>5,000+ happy patients</p>
+              <div>
+                <strong>5,000+</strong>
+                <span>happy patients</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section section-about">
+      <section id="about" class="section reveal">
         <div class="container about-grid">
           <div class="about-image-wrap">
-            <div class="about-image-frame"></div>
-            <img src="assets/dr-mtshali.jpg" alt="Dr. H Mtshali, BDS" />
+            <div class="about-frame">
+              <img src="assets/dr-mtshali.jpg" alt="Dr. H Mtshali, BDS" />
+            </div>
+            <div class="about-id-tag">
+              <span>Attending dentist</span>
+              <strong>Dr. H Mtshali</strong>
+            </div>
           </div>
           <div class="about-copy">
-            <p class="eyebrow">Meet your dentist</p>
+            <span class="eyebrow">Meet your dentist</span>
             <h2>Dr. H Mtshali, BDS</h2>
-            <p class="section-subtitle">Family & Cosmetic Dentistry</p>
+            <p class="section-subtitle">Family &amp; Cosmetic Dentistry</p>
             <div class="about-text">
               <p>
                 With over a decade of clinical experience, Dr. H Mtshali earned his BDS from the University of the
@@ -146,144 +148,162 @@
         </div>
       </section>
 
-      <section id="services" class="section section-services">
-        <div class="container section-header">
-          <p class="eyebrow">What we offer</p>
+      <svg class="arc-divider container" viewBox="0 0 1200 48" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,24 Q300,4 600,24 T1200,24" />
+      </svg>
+
+      <section id="services" class="section section-alt reveal">
+        <div class="container section-header centered">
+          <span class="eyebrow">What we offer</span>
           <h2>Comprehensive dental care, all in one place</h2>
-          <p class="section-copy">
-            From routine cleanings to full smile makeovers, we care for every generation of your family.
-          </p>
+          <p>From routine cleanings to full smile makeovers, we care for every generation of your family.</p>
         </div>
-        <div class="container services-grid">
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="stethoscope"></span></span>
-            <h3>General Checkups & Cleanings</h3>
-            <p>Routine exams and professional cleanings to keep your smile healthy year-round.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="sparkles"></span></span>
-            <h3>Teeth Whitening</h3>
-            <p>Safe, in-chair whitening that brightens your smile several shades in a single visit.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="wrench"></span></span>
-            <h3>Dental Fillings</h3>
-            <p>Tooth-coloured composite fillings that restore decayed teeth and blend seamlessly.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="anchor"></span></span>
-            <h3>Root Canal Therapy</h3>
-            <p>Modern, comfortable root canal treatment to save infected teeth without pain.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="zap"></span></span>
-            <h3>Tooth Extractions</h3>
-            <p>Gentle removal of damaged teeth with sedation options for anxious patients.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="crown"></span></span>
-            <h3>Crowns & Bridges</h3>
-            <p>Custom porcelain crowns and bridges that restore strength and natural appearance.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="layers"></span></span>
-            <h3>Dentures</h3>
-            <p>Comfortable full and partial dentures crafted for a natural, confident smile.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="smile"></span></span>
-            <h3>Veneers</h3>
-            <p>Ultra-thin porcelain veneers for a flawless, red-carpet smile transformation.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="activity"></span></span>
-            <h3>Orthodontics / Braces</h3>
-            <p>Traditional and ceramic braces to straighten teeth and correct bite issues.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="scan-line"></span></span>
-            <h3>Invisalign / Clear Aligners</h3>
-            <p>Nearly invisible aligners that straighten your teeth without metal brackets.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="baby"></span></span>
-            <h3>Pediatric Dentistry</h3>
-            <p>Fun, gentle dental care that helps children build lifelong healthy habits.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="shield"></span></span>
-            <h3>Dental Implants</h3>
-            <p>Permanent titanium implants that look, feel, and function like natural teeth.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="heart-pulse"></span></span>
-            <h3>Gum Disease Treatment</h3>
-            <p>Periodontal therapy to treat gum disease and protect your long-term oral health.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="palette"></span></span>
-            <h3>Wisdom Tooth Removal</h3>
-            <p>Safe, minimally invasive removal of wisdom teeth with rapid recovery care.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="alert-triangle"></span></span>
-            <h3>Emergency Dental Care</h3>
-            <p>Same-day emergency slots for toothaches, breaks, and dental trauma.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="search"></span></span>
-            <h3>Oral Cancer Screening</h3>
-            <p>Thorough screening at every checkup for early detection and peace of mind.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="moon"></span></span>
-            <h3>Sedation Dentistry</h3>
-            <p>Relaxing sedation options for nervous patients or longer procedures.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon"><span data-lucide="sparkles"></span></span>
-            <h3>Cosmetic Bonding</h3>
-            <p>Quick, affordable bonding to repair chips, gaps, and reshape teeth in one visit.</p>
-          </article>
+
+        <div class="container">
+          <div class="service-category">
+            <div class="category-head">
+              <h3>Preventive Care</h3>
+              <span class="category-count">3 treatments</span>
+            </div>
+            <div class="services-grid">
+              <article class="service-card">
+                <h4>General Checkups &amp; Cleanings</h4>
+                <p>Routine exams and professional cleanings to keep your smile healthy year-round.</p>
+              </article>
+              <article class="service-card">
+                <h4>Gum Disease Treatment</h4>
+                <p>Periodontal therapy to treat gum disease and protect your long-term oral health.</p>
+              </article>
+              <article class="service-card">
+                <h4>Oral Cancer Screening</h4>
+                <p>Thorough screening at every checkup for early detection and peace of mind.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <div class="category-head">
+              <h3>Restorative Care</h3>
+              <span class="category-count">7 treatments</span>
+            </div>
+            <div class="services-grid">
+              <article class="service-card">
+                <h4>Dental Fillings</h4>
+                <p>Tooth-coloured composite fillings that restore decayed teeth and blend seamlessly.</p>
+              </article>
+              <article class="service-card">
+                <h4>Root Canal Therapy</h4>
+                <p>Modern, comfortable root canal treatment to save infected teeth without pain.</p>
+              </article>
+              <article class="service-card">
+                <h4>Tooth Extractions</h4>
+                <p>Gentle removal of damaged teeth with sedation options for anxious patients.</p>
+              </article>
+              <article class="service-card">
+                <h4>Crowns &amp; Bridges</h4>
+                <p>Custom porcelain crowns and bridges that restore strength and natural appearance.</p>
+              </article>
+              <article class="service-card">
+                <h4>Dentures</h4>
+                <p>Comfortable full and partial dentures crafted for a natural, confident smile.</p>
+              </article>
+              <article class="service-card">
+                <h4>Dental Implants</h4>
+                <p>Permanent titanium implants that look, feel, and function like natural teeth.</p>
+              </article>
+              <article class="service-card">
+                <h4>Wisdom Tooth Removal</h4>
+                <p>Safe, minimally invasive removal of wisdom teeth with rapid recovery care.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <div class="category-head">
+              <h3>Cosmetic Care</h3>
+              <span class="category-count">5 treatments</span>
+            </div>
+            <div class="services-grid">
+              <article class="service-card">
+                <h4>Teeth Whitening</h4>
+                <p>Safe, in-chair whitening that brightens your smile several shades in a single visit.</p>
+              </article>
+              <article class="service-card">
+                <h4>Veneers</h4>
+                <p>Ultra-thin porcelain veneers for a flawless, red-carpet smile transformation.</p>
+              </article>
+              <article class="service-card">
+                <h4>Orthodontics / Braces</h4>
+                <p>Traditional and ceramic braces to straighten teeth and correct bite issues.</p>
+              </article>
+              <article class="service-card">
+                <h4>Invisalign / Clear Aligners</h4>
+                <p>Nearly invisible aligners that straighten your teeth without metal brackets.</p>
+              </article>
+              <article class="service-card">
+                <h4>Cosmetic Bonding</h4>
+                <p>Quick, affordable bonding to repair chips, gaps, and reshape teeth in one visit.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="service-category">
+            <div class="category-head">
+              <h3>Family &amp; Comfort Care</h3>
+              <span class="category-count">3 treatments</span>
+            </div>
+            <div class="services-grid">
+              <article class="service-card">
+                <h4>Pediatric Dentistry</h4>
+                <p>Fun, gentle dental care that helps children build lifelong healthy habits.</p>
+              </article>
+              <article class="service-card">
+                <h4>Sedation Dentistry</h4>
+                <p>Relaxing sedation options for nervous patients or longer procedures.</p>
+              </article>
+              <article class="service-card">
+                <h4>Emergency Dental Care</h4>
+                <p>Same-day emergency slots for toothaches, breaks, and dental trauma.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section section-why">
-        <div class="container section-header">
-          <p class="eyebrow">Why choose us</p>
+      <section class="section reveal">
+        <div class="container section-header centered">
+          <span class="eyebrow">Why choose us</span>
           <h2>Care that feels different</h2>
         </div>
         <div class="container why-grid">
           <article class="why-card">
-            <span class="why-icon"><span data-lucide="scan-line"></span></span>
             <h3>Modern Technology</h3>
             <p>Digital X-rays, 3D scanning, and the latest chair-side tech.</p>
           </article>
           <article class="why-card">
-            <span class="why-icon"><span data-lucide="heart-pulse"></span></span>
             <h3>Pain-Free Approach</h3>
             <p>Gentle techniques and sedation options for total comfort.</p>
           </article>
           <article class="why-card">
-            <span class="why-icon"><span data-lucide="shield"></span></span>
             <h3>Flexible Payment Plans</h3>
             <p>Medical aid friendly with in-house payment plans available.</p>
           </article>
           <article class="why-card">
-            <span class="why-icon"><span data-lucide="alert-triangle"></span></span>
             <h3>Same-Day Emergency</h3>
             <p>Dental emergencies seen the same day, whenever possible.</p>
           </article>
         </div>
       </section>
 
-      <section id="testimonials" class="section section-testimonials">
-        <div class="container section-header">
-          <p class="eyebrow">Kind words</p>
+      <section id="testimonials" class="section section-alt reveal">
+        <div class="container section-header centered">
+          <span class="eyebrow">Kind words</span>
           <h2>Loved by families across Sandton</h2>
         </div>
         <div class="container testimonials-grid">
           <article class="testimonial-card">
+            <div class="quote-mark">&ldquo;</div>
+            <blockquote>Dr. H Mtshali is the kindest dentist I've ever visited. He explained every step and I actually looked forward to my next appointment.</blockquote>
             <div class="testimonial-stars">
               <span data-lucide="star"></span>
               <span data-lucide="star"></span>
@@ -291,12 +311,11 @@
               <span data-lucide="star"></span>
               <span data-lucide="star"></span>
             </div>
-            <blockquote>"Dr. H Mtshali is the kindest dentist I've ever visited. He explained every step and I actually looked forward to my next appointment!"</blockquote>
-            <div class="testimonial-author">
-              <span>Thandi M.</span>
-            </div>
+            <div class="testimonial-author">THANDI M.</div>
           </article>
           <article class="testimonial-card">
+            <div class="quote-mark">&ldquo;</div>
+            <blockquote>I've feared the dentist my whole life. The team at FriendlyDentist made me feel so at ease — I finally got the treatment I needed.</blockquote>
             <div class="testimonial-stars">
               <span data-lucide="star"></span>
               <span data-lucide="star"></span>
@@ -304,12 +323,11 @@
               <span data-lucide="star"></span>
               <span data-lucide="star"></span>
             </div>
-            <blockquote>"I've feared the dentist my whole life. The team at FriendlyDentist made me feel so at ease — I finally got the treatment I needed."</blockquote>
-            <div class="testimonial-author">
-              <span>James P.</span>
-            </div>
+            <div class="testimonial-author">JAMES P.</div>
           </article>
           <article class="testimonial-card">
+            <div class="quote-mark">&ldquo;</div>
+            <blockquote>Beautiful, modern practice with a warm team. My kids love coming here, and my whitening results were amazing.</blockquote>
             <div class="testimonial-stars">
               <span data-lucide="star"></span>
               <span data-lucide="star"></span>
@@ -317,17 +335,14 @@
               <span data-lucide="star"></span>
               <span data-lucide="star"></span>
             </div>
-            <blockquote>"Beautiful, modern practice with a warm team. My kids love coming here, and my whitening results were amazing."</blockquote>
-            <div class="testimonial-author">
-              <span>Zanele K.</span>
-            </div>
+            <div class="testimonial-author">ZANELE K.</div>
           </article>
         </div>
       </section>
 
-      <section class="section section-gallery">
-        <div class="container section-header">
-          <p class="eyebrow">Our practice</p>
+      <section class="section reveal">
+        <div class="container section-header centered">
+          <span class="eyebrow">Our practice</span>
           <h2>A calm, modern space designed for you</h2>
         </div>
         <div class="container gallery-grid">
@@ -342,13 +357,11 @@
         </div>
       </section>
 
-      <section id="contact" class="section section-contact">
-        <div class="container section-header">
-          <p class="eyebrow">Get in touch</p>
+      <section id="contact" class="section section-alt reveal">
+        <div class="container section-header centered">
+          <span class="eyebrow">Get in touch</span>
           <h2>Book your appointment</h2>
-          <p class="section-copy">
-            Send us a message and our team will confirm your visit within one business day.
-          </p>
+          <p>Send us a message and our team will confirm your visit within one business day.</p>
         </div>
         <div class="container contact-grid">
           <div class="contact-card contact-form-card">
@@ -373,7 +386,9 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
               </div>
-              <button type="submit" class="button button-primary button-full">Request Appointment</button>
+              <div class="field-row-full">
+                <button type="submit" class="button button-primary button-full">Request Appointment</button>
+              </div>
             </form>
 
             <div id="successMessage" class="contact-success hidden">
@@ -413,7 +428,7 @@
               <div class="info-icon"><span data-lucide="clock"></span></div>
               <div>
                 <h4>Hours</h4>
-                <p>Mon–Fri: 08:00 – 17:00<br />Saturday: 08:00 – 13:00<br />Sun & Public Holidays: Closed</p>
+                <p>Mon–Fri: 08:00 – 17:00<br />Saturday: 08:00 – 13:00<br />Sun &amp; Public Holidays: Closed</p>
               </div>
             </article>
           </div>
@@ -433,19 +448,12 @@
       <div class="container footer-grid">
         <div>
           <a href="#home" class="brand-link footer-brand">
-            <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" fill="currentColor">
+            <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round">
               <path d="M32 14c-6 0-9 3-14 3-4 0-6 3-6 8 0 8 3 14 5 19 2 4 3 8 6 8 2 0 3-3 4-6s2-6 5-6 4 3 5 6 2 6 4 6c3 0 4-4 6-8 2-5 5-11 5-19 0-5-2-8-6-8-5 0-8-3-14-3Z" />
             </svg>
-            <span class="brand-text">Friendly<span>Dentist</span></span>
+            <span class="brand-text">Friendly<em>Dentist</em></span>
           </a>
-          <p class="footer-copy">
-            Gentle care, healthy smiles. Family & cosmetic dentistry in Sandton.
-          </p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><span data-lucide="facebook"></span></a>
-            <a href="#" aria-label="Instagram"><span data-lucide="instagram"></span></a>
-            <a href="#" aria-label="Message"><span data-lucide="message-circle"></span></a>
-          </div>
+          <p class="footer-copy">Gentle care, healthy smiles. Family &amp; cosmetic dentistry in Sandton.</p>
         </div>
 
         <div>
@@ -470,16 +478,14 @@
 
         <div>
           <h4>Opening hours</h4>
-          <ul class="footer-links footer-contact">
+          <ul class="footer-links footer-hours">
             <li>Mon–Fri: 08:00 – 17:00</li>
             <li>Sat: 08:00 – 13:00</li>
-            <li>Sun & Public Holidays: Closed</li>
+            <li>Sun &amp; Public Holidays: Closed</li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        © 2026 FriendlyDentist. All rights reserved.
-      </div>
+      <div class="container footer-bottom">© 2026 FriendlyDentist. All rights reserved.</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.575.0/dist/lucide.min.js"></script>

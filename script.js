@@ -3,6 +3,41 @@ document.addEventListener("DOMContentLoaded", function () {
     lucide.createIcons();
   }
 
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var siteHeader = document.getElementById("siteHeader");
+  if (siteHeader) {
+    var updateHeaderState = function () {
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+    };
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+  }
+
+  var revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length) {
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+    } else {
+      var revealObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+      );
+      revealEls.forEach(function (el) {
+        revealObserver.observe(el);
+      });
+    }
+  }
+
   var menuToggle = document.getElementById("mobileToggle");
   var mobileNav = document.getElementById("mobileNav");
   var menuIcon = document.getElementById("menuIcon");
@@ -14,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var resetForm = document.getElementById("resetForm");
 
   function updateMenuButton(isOpen) {
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     if (isOpen) {
       menuIcon.style.display = "none";
       closeIcon.style.display = "inline-flex";
